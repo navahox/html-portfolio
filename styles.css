@@ -1,0 +1,65 @@
+/* setting size of the page and its properties*/
+body {
+    position: relative;
+    min-height: 100vh;
+    max-width: 100vw;
+}
+
+/* site properties */
+#site {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    text-align: center;
+    left: 0;
+}
+
+/* header properties */
+.title  {
+    background-color: rgba(35, 199, 228, 0.927);
+    border-bottom: 5px solid red;
+    border-radius: 10px;
+    margin-bottom: 5px;
+}
+
+/* layout of the website- tiles */
+.column3 {
+    position: relative;
+    padding: 10px;
+    margin: auto;
+    margin-bottom: 5px;
+    width: 30%;
+    height: 30%;
+    border: 5px solid red;
+    border-radius: 10px;
+    background-color: rgba(0, 234, 255, 0.589);
+}
+
+/* propeties of the tile's title */
+h3 {
+    background-color: rgba(35, 199, 228, 0.927);
+    border-radius: 10px;
+    margin: 5px;
+    padding: 2px 5px;
+    text-align: center;
+}
+
+/* image properties */
+img {
+    width: 90%;
+    height: 80%;
+    border: 5px solid black;
+    border-radius: 5px;
+}
+
+/*footer properties*/
+.info {
+    margin-top: 5px;
+    padding: 5px;
+    bottom: 0;
+    width: 100%;
+    text-align: center;
+    background-color: rgba(35, 199, 228, 0.927);
+    border-top: 5px solid red;
+    border-radius: 10px;
+}
