@@ -25,6 +25,7 @@ body {
 /* layout of the website- tiles */
 .column3 {
     position: relative;
+    display: inline-block;
     padding: 10px;
     margin: auto;
     margin-bottom: 5px;
