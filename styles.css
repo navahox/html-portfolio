@@ -1,6 +1,6 @@
 /* body properties, background etc. */
 html, body {
-    height: 100vh;
+    height: 100%;
     overflow: auto;
     width: 100%;
     margin: 0;
@@ -17,8 +17,7 @@ html, body {
 
 /* grid */
 .container {
-    min-height: 100vh;
-    min-height: 100dvh;
+    max-height: 100%;
     display: grid;
     grid-template-columns: 0.3fr 1fr 1fr;
     grid-template-rows: 0.5fr 2fr 0.2fr;
@@ -36,18 +35,21 @@ html, body {
     font-size: 1rem;
     border-bottom: 3px solid grey;
 }
+/* properties of the picture's surrounding */
 .Profilepic {
     display: flex;
     justify-content: center;
     align-items: center;
     padding: 10px;
 }
+/* properties of he image */
 .profileimg {
     width: 200px;
     height: 200px;
     border-radius: 50%;
     object-fit: cover;
 }
+/* header propeties */
 .title {
     display: flex;
     flex-direction: column;
@@ -100,7 +102,7 @@ button {
     font-size: 1.5rem;
     border: none;
     cursor: pointer; 
-    padding: 20px;
+    padding: 10px;
 }
 
 /* send message */
@@ -109,7 +111,7 @@ button {
     font-size: 1.5rem;
     border: none;
     cursor: pointer;  
-    padding: 20px;  
+    padding: 10px;  
 }
 
 /* Resume */
@@ -118,15 +120,16 @@ button {
     font-size: 1.5rem;
     border: none;
     cursor: pointer; 
-    padding: 20px;
+    padding: 10px;
 }
 
 /* hover for sidebar */
 .click:hover {
     background-color: rgba(128, 128, 128, 0.203);
+    border-radius: 30px;
 }
 
-/* tiles placement and properties */
+/* tiles layout and position */
 .tiles {
     grid-area: 2/2/3/4;
     display: grid;
@@ -136,6 +139,7 @@ button {
     gap: 5px;
 }
 
+/* tiles properties */
 .click-tiles {
     position: relative;
     width: 100%;
