@@ -1,11 +1,19 @@
 /* body properties, background etc. */
 html, body {
-    height: 100%;
+    height: 100vh;
     overflow: auto;
     width: 100%;
     margin: 0;
     padding: 0;
     background-color: black;
+}
+
+
+.jura-font {
+  font-family: "Jura", serif;
+  font-optical-sizing: auto;
+  font-weight: <weight>;
+  font-style: normal;
 }
 
 /* Global reset and box-sizing */
@@ -18,7 +26,6 @@ html, body {
 /* grid */
 .container {
     height: 100%;
-    width: 100%;
     display: grid;
     grid-template-columns: 0.3fr 1fr 1fr;
     grid-template-rows: 0.5fr 2fr 0.2fr;
