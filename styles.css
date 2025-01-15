@@ -1,38 +1,34 @@
 /* body properties, background etc. */
 html, body {
-    min-height: 100vh;
+    height: 100%;
     overflow: auto;
     width: 100%;
     margin: 0;
     padding: 0;
     background-color: black;
 }
-
-
+/* font family of the website */
 .jura-font {
   font-family: "Jura", serif;
   font-optical-sizing: auto;
   font-weight: 300;
   font-style: normal;
 }
-
 /* Global reset and box-sizing */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
-
 /* grid */
 .container {
     height: 100%;
     display: grid;
     grid-template-columns: 0.3fr 1fr 1fr;
-    grid-template-rows: 0.5fr 2fr 0.2fr;
+    grid-template-rows: 0.5fr 1fr 0.2fr;
     grid-auto-rows: 1fr;
     gap: 5px;
 }
-
 /* info */
 .header {
     grid-column:  2 / span 2;
@@ -71,6 +67,7 @@ h1, h2, p {
 
 /* side menu */
 .menu {
+    height: 100%;
     grid-area: 1/1/4/1;
     display: flex;
     flex-direction: column;
@@ -91,7 +88,11 @@ button {
     gap: 10px; /* Adds spacing between icon and text */
     cursor: pointer;
 }
-
+/* keyboard navigation accessibility */
+button:focus {
+    outline: 2px solid #fff;
+    outline-offset: 2px;
+  }
 /* icons properties */
 .material-symbols-outlined { 
     color: grey;
@@ -106,6 +107,8 @@ button {
 
 /* profile button */
 .profile {
+    display: flex;
+    align-items: center;
     color: gray;
     font-size: 1.5rem;
     border: none;
@@ -115,6 +118,8 @@ button {
 
 /* send message */
 .message {
+    display: flex;
+    align-items: center;
     color: gray;
     font-size: 1.5rem;
     border: none;
@@ -124,6 +129,8 @@ button {
 
 /* Resume */
 .resume {
+    display: flex;
+    align-items: center;
     color: grey;
     font-size: 1.5rem;
     border: none;
@@ -155,18 +162,19 @@ button {
     overflow: hidden;
     padding-bottom: 100%;
 }
-
+@media (min-width: 768px) {
 /* tiles overlay properties */
 .click-tiles:hover .overlay {
     bottom: 0;
     height: 100%;
+}
 }
 .overlay {
     position: absolute;
     bottom: 100%;
     left: 0;
     right: 0;
-    background-color: grey;
+    background-color: rgba(128, 128, 128, 0.800);
     overflow: hidden;
     width: 100%;
     height: 0;
@@ -174,7 +182,7 @@ button {
 }
 .text {
     color: white;
-    font-size: 2em;
+    font-size: 1.5em;
     position: absolute;
     overflow: hidden;
     top: 50%;
@@ -212,14 +220,19 @@ button {
     height: 100%;
     width: 0;
     position: fixed;
-    z-index: 2;
+    z-index: 1;
     top: 0;
     left: 0;
     background-color: black;
     background-color: rgba(0, 0, 0, 0.9);
     overflow-x: hidden;
-    transition: 0.5s;
+    transition: 0.5s ease;
   }
+  /* When active */
+.overlay-p.active {
+    transform: scaleX(1);
+  }
+  /* paragraph inside overlay */
   .overlay-p p {
     position: relative;
     top: 25%;
@@ -239,3 +252,87 @@ button {
   .overlay-p .x:hover, .overlay-p .x:focus {
     color: #f1f1f1;
   }
+  /* responsivness for smaller screen */
+  @media (max-width: 768px) {
+    .tiles {
+      grid-template-columns: 1fr 1fr;
+    }
+    .menu {
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: flex-start;
+    }
+    .click {
+        width: 100%;
+    }
+    .profileimg {
+        width: 100px;
+        height: 100px;
+    }
+    .profile, .message, .resume, .material-symbols-outlined {
+        font-size: 1em;
+    }
+    .container {
+        grid-template-columns: auto auto;
+    }
+    .overlay {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        background-color: rgba(128, 128, 128, 0.800);
+        overflow: hidden;
+        width: 100%;
+        height: 100%;
+        transition: .5s ease;
+    }
+    .text {
+        color: white;
+        font-size: 1.5em;
+        position: absolute;
+        overflow: hidden;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+  }
+  @media (max-width: 480px) {
+    .tiles {
+      grid-template-columns: 1fr;
+    }
+    .container {
+        display: block;
+    }
+    .click {
+        width: 100%;
+    }
+    .menu {
+        height: auto;
+        border: none;
+    }
+    .resume, .profile, .message {
+        border: 1px solid grey;
+        border-radius: 20px;
+    }
+    .overlay {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        background-color: rgba(128, 128, 128, 0.800);
+        overflow: hidden;
+        width: 100%;
+        height: 100%;
+        transition: .5s ease;
+    }
+    .text {
+        color: white;
+        font-size: 1.5em;
+        position: absolute;
+        overflow: hidden;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+  }
+  
