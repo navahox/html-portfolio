@@ -23,22 +23,64 @@
             <div class="title jura-font">
                 <h1>Patryk Hanczko</h1>
                 <h2>I'm a Web Developer</h2>
-                <p>I come from Poland. I completed my education as a mechatronics technician in the city of Wroclaw.</p>
-                <p>My strengths are quick learning, reliability, precision and focus on high quality.</p>
-                <p>I am also open-minded, cooperative and development-oriented.</p>
-                <p>I believe that I have useful skills and potential that could be a good tool for the development of the company.</p>
+                    <div class="overlay-p" id="info">    
+                        <p>I come from Poland. I completed my education as a mechatronics technician in the city of Wroclaw.</p>
+                        <p>My strengths are quick learning, reliability, precision and focus on high quality.</p>
+                        <p>I am also open-minded, cooperative and development-oriented.</p>
+                        <p>I believe that I have useful skills and potential that could be a good tool for the development of the company.</p>
+                        <a href="javascript:void(0)" class="closebtn x" onclick="closeNav()">&times;</a>
+                    </div>
             </div>
         </div>
         
         <!-- sidebar menu -->
         <div class="menu jura-font">
-            <div class="click">
-                <a href="./public/Profile Website/profile.html">
-                    <button class="profile"><span class="material-symbols-outlined">info</span>
+                    <button class="profile click" onclick="openNav()"><span class="material-symbols-outlined">info</span>
                         <span>Info</span>
                     </button>
-                </a>
-            </div>
+                <script>
+                    // Function to open the navigation menu
+                    function openNav() {
+                        // Make overlay part visible
+                        document.getElementById("info").style.width= "100%";
+                        // Add an event listener for the Escape key when the menu is opened
+                        document.addEventListener("keydown", handleEscapeKey);
+                            // Create a snackbar notification
+                          const snackbar = document.createElement("div");
+                          snackbar.textContent = "Press ESC to close the menu.";
+                          snackbar.style.position = "fixed";
+                          snackbar.style.bottom = "30%";
+                          snackbar.style.left = "50%";
+                          snackbar.style.transform = "translateX(-50%)";
+                          snackbar.style.backgroundColor = "#333";
+                          snackbar.style.color = "#fff";
+                          snackbar.style.padding = "10px 20px";
+                          snackbar.style.borderRadius = "5px";
+                          snackbar.style.fontSize = "1.5em";
+                          snackbar.style.zIndex = "1000";
+                          snackbar.id = "snackbar";
+
+                          document.body.appendChild(snackbar);
+
+                          // Remove the snackbar after 3 seconds
+                          setTimeout(() => {
+                            snackbar.remove();
+                              }, 3000);
+                    }
+                    // Function to close the navigation menu
+                    function closeNav() {
+                        // Close the overlay part
+                        document.getElementById("info").style.width= "0%";
+                        // Remove the event listener for the Escape key when the menu is closed
+                        document.removeEventListener("keydown", handleEscapeKey);
+                    }
+                    // Function to handle the Escape key press
+                    function handleEscapeKey(event) {
+                        if (event.key === "Escape") { // Check if the pressed key is "Escape"
+                        closeNav();  // Call the closeNav function to hide the menu
+                        }
+                    }
+                </script>
             <div class="click">
                 <a href="./public/Resume/Resume.html">
                     <button class="resume"><span class="material-symbols-outlined">person</span>
