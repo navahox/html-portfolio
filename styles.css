@@ -1,6 +1,6 @@
 /* body properties, background etc. */
 html, body {
-    height: 100vh;
+    height: 100%;
     overflow: auto;
     width: 100%;
     margin: 0;
