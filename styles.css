@@ -63,12 +63,26 @@ a {
         border-bottom: 2px solid white;
 }
 /* all websites- card properties*/
-.card {
-        margin: 5px;
-        transform: translate3d(0);
-        cursor: pointer;
-}
 .card:hover {
         transform: translate3d(0, -1em, 0);
         box-shadow: 5px 10px 10px rgba(0, 0, 0, 0.395) !important;
 }
+.card {
+        height: 100%; /* Ensure the card fills the parent column */
+        display: flex;
+        flex-direction: column; /* Stack content vertically */
+        margin: 5px;
+        transform: translate3d(0);
+        cursor: pointer;
+}
+/* text inside cards- properties */    
+.card-text {
+        height: 150px; /* Set a fixed height for the text field */
+        overflow-y: auto; /* Make text scrollable if it overflows */
+}
+/* image inside cards- properties*/    
+.card img {
+        object-fit: fill; /* Ensure the thumbnail image looks good */
+}
+
+    

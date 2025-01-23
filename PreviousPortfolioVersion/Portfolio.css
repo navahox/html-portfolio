@@ -1,0 +1,143 @@
+/* setting size of the page and its properties*/
+body {
+    height: 100vh;
+    background-color: black !important;
+    display: flex;
+    flex-direction: column;
+}
+
+/* layout of the website */
+.containerx {
+    display: inline-flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    flex-wrap: wrap;
+}
+
+/* header properties */
+.title {
+    color: white;
+    text-align: center;
+    padding: 10px;
+    background: rgb(2,0,36);
+    background: linear-gradient(180deg, rgba(2,0,36,1) 0%, rgba(9,9,121,1) 35%, rgba(0,212,255,1) 100%);
+    border-radius: 0px 0px 10px 10px;
+    margin-bottom: 20px;
+    margin-top: 10px;
+}
+
+/* tiles */
+.tiles {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 20px;
+    width: 250px;
+    height: 300px;
+    background-color: white;
+    border: 5px solid rgba(0,212,255,1);
+    border-radius: 10px;
+}
+
+/* propeties of the tile's title */
+.button {
+    text-decoration: none;
+    text-align: center;
+    height: 70px !important;
+    width: 200px !important;
+    background: rgb(2,0,36);
+    background: linear-gradient(30deg, rgba(2,0,36,1) 0%, rgba(9,9,121,1) 35%, rgba(0,212,255,1) 100%);
+    color: white;
+    border-radius: 10px !important;
+    border: none;
+    font-size: 1.2rem;
+    padding: 10px !important;
+    margin-bottom: 10px !important;
+    cursor: pointer;
+}
+
+/* image properties */
+img {
+    align-self: center;
+    width: 200px;
+    height: 200px;
+    border: 5px solid black;
+    border-radius: 10px;
+}
+
+/* info properties */
+.info {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    color: white;
+    text-align: center;
+    padding: 10px;
+}
+
+a {
+    text-decoration: none;
+}
+/* contact and about */
+.about {
+    color: white;
+    border: 1px solid white;
+    border-radius: 10px;
+    padding: 5px;
+}
+
+/*footer properties*/
+.footerx {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: flex-end;
+    color: white;
+    margin-bottom: 10px;
+}
+
+.bottom    {
+    background: rgb(2,0,36);
+    background: linear-gradient(0deg, rgba(2,0,36,1) 0%, rgba(9,9,121,1) 35%, rgba(0,212,255,1) 100%);
+    border-radius: 10px 10px 0px 0px;
+    padding: 10px;
+}
+/* nav link color override */
+.nav-link {
+    color: grey !important;
+    border-bottom: 2px solid transparent !important;
+}
+/* nav link color hover override */
+.nav-link.inactive:hover {
+    color: white !important; /* Changes hover color to orange */
+    border-bottom: 2px solid white !important;
+}
+/* footer background */
+.gradient-background {
+    background: linear-gradient(300deg, grey, black, grey);
+    background-size: 180% 180%;
+    animation: gradient-animation 18s ease infinite;
+}
+@keyframes gradient-animation {
+    0% {
+      background-position: 0% 50%;
+    }
+    50% {
+      background-position: 100% 50%;
+    }
+    100% {
+      background-position: 0% 50%;
+    }
+}
+.cover-container a {
+    text-decoration: none;
+}
+footer .nav-link {
+    color: white !important; /* Ensure footer links are white */
+}
+
+footer p {
+    color: white; /* Ensure footer paragraph text is white */
+}

@@ -1,0 +1,134 @@
+.project {
+  font-family: "Poppins", sans-serif;
+  margin: 50px 50px 0 50px;
+  display: flex;
+  flex-direction: column;
+  min-height: auto;
+}
+.main {
+  flex: 1;
+}
+/* title properties */
+h1 {
+  font-size: 5rem !important;
+}
+/* logo properties under 681px */
+.logo {
+  width: 250px;
+}
+/* right block*/
+.right {
+  float: right;
+}
+
+/* left block*/
+.left {
+  float: left;
+}
+
+/* block properties */
+.cardx {
+  width: 45%;
+}
+
+/* tile image properties above 681px */
+.tile-image {
+  height: 200px;
+  float: left;
+  margin-right: 50px;
+}
+
+/* display of the images */
+.tile-image {
+  float: left; 
+  margin-right: 50px; 
+}
+
+
+/* colouring of a word in the heading */
+span {
+  color: blue;
+}
+
+.footerx {
+  text-align: right;
+  color: midnightblue;
+  clear:both; /* clears any responsibility to wrap around things that are floating */
+}
+
+/* responsiveness for different screens */
+@media (max-width: 680px) {
+
+  /* title size */
+  h1 {
+    font-size: 3.5rem !important;
+    text-align: center;
+  }
+
+  /* logo properties under 680px */  
+  .logo {
+    width: 150px;
+  }
+  
+  /* block properties */
+  .cardx {
+    display: block;
+    margin-bottom: 30px;
+    text-align: justify;
+    width: 100%;
+  }
+
+  /* tile image properties under 680px */
+  .tile-image {
+    width: 100%;
+    margin-bottom: 10px;
+    display: inline;
+    object-fit: cover;
+  }
+
+}
+/* navbar and main-footer*/
+/* nav link color override */
+.nav-link {
+  color: grey !important;
+  border-bottom: 2px solid transparent !important;
+}
+/* nav link color hover override */
+.nav-link.inactive:hover {
+  color: white !important; /* Changes hover color to orange */
+  border-bottom: 2px solid white !important;
+}
+/* footer background */
+.gradient-background {
+  background: linear-gradient(300deg, grey, black, grey);
+  background-size: 180% 180%;
+  animation: gradient-animation 18s ease infinite;
+}
+@keyframes gradient-animation {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+.cover-container a {
+  text-decoration: none;
+}
+.main-footer .nav-link {
+  color: white !important; /* Ensure footer links are white */
+}
+
+.main-footer p {
+  color: white; /* Ensure footer paragraph text is white */
+}
+body, html {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  background-color: #faf9f6;
+}

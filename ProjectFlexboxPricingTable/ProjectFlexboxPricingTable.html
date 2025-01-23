@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Flexbox Pricing Table</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Sono:wght@400;700&display=swap"
+      rel="stylesheet"/>
+      <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+      <link rel="stylesheet" href="../main/cardstyling.css">
+    <style>
+
+      .project {
+        font-family: "Sono", sans-serif;
+      }
+      
+
+      /* button styling */
+      .plan-button1 {
+        background: rgb(2,0,36);
+        background: linear-gradient(30deg, rgba(2,0,36,1) 0%, rgba(9,9,121,1) 35%, rgba(0,212,255,1) 100%);
+        color: white;
+        border-radius: 10px;
+        border: none;
+        font-size: 1.2rem;
+        padding: 10px;
+        margin-bottom: 10px;
+      }
+      
+      .plan-button2 {
+        background: rgb(2,0,36);
+        background: linear-gradient(30deg, rgba(2,0,36,1) 0%, rgb(9, 121, 30) 35%, rgb(4, 255, 0) 100%);
+        color: white;
+        border-radius: 10px;
+        border: none;
+        font-size: 1.2rem;
+        padding: 10px;
+        margin-bottom: 10px;
+      }
+
+      .plan-button3 {
+        background: rgb(2,0,36);
+        background: linear-gradient(30deg, rgba(2,0,36,1) 0%, rgb(121, 9, 9) 35%, rgb(255, 34, 0) 100%);
+        color: white;
+        border-radius: 10px;
+        border: none;
+        font-size: 1.2rem;
+        padding: 10px;
+        margin-bottom: 10px;
+      }
+
+      /* layout on the page */
+      .pricing-container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 2rem;
+        height: 100vh;
+        margin-bottom: 100px;
+      }
+
+
+      /* plan price properties */
+      .plan-price {
+        font-weight: bold;
+        font-size: 2rem;
+        margin-bottom: 10px;
+      }
+
+      /* plan title properties */
+      .plan-title1 {
+        background: rgb(2,0,36);
+        background: linear-gradient(30deg, rgba(2,0,36,1) 0%, rgba(9,9,121,1) 35%, rgba(0,212,255,1) 100%);
+        color: white;
+        font-size: 2rem;
+        margin-bottom: 10px;
+        padding: 10px;
+        border-radius: 20px 20px 0px 0px;
+      }
+
+      .plan-title2 {
+        background: rgb(2,0,36);
+        background: linear-gradient(30deg, rgba(2,0,36,1) 0%, rgb(9, 121, 30) 35%, rgb(4, 255, 0) 100%);
+        color: white;
+        font-size: 2rem;
+        margin-bottom: 10px;
+        padding: 10px;
+        border-radius: 20px 20px 0px 0px;
+      }
+
+      .plan-title3 {
+        background: rgb(2,0,36);
+        background: linear-gradient(30deg, rgba(2,0,36,1) 0%, rgb(121, 9, 9) 35%, rgb(255, 34, 0) 100%);
+        color: white;
+        font-size: 2rem;
+        margin-bottom: 10px;
+        padding: 10px;
+        border-radius: 20px 20px 0px 0px;
+      }
+
+      
+      /* boxes */
+      .pricing-plan {
+        text-align: center;
+        width: 300px;
+        height: auto;
+        border-radius: 20px;
+        background: white;
+        border: 1px solid black;
+      }
+
+      /* features properties */
+      .plan-features {
+        margin-bottom: 10px;
+        list-style: none;
+        text-align: left;
+        padding-left: 20px;
+      }
+
+      /* Hint: What can you do with a media query and flexbox? */
+      @media (max-width: 1250px) {
+        /* layout on the page */
+      .pricing-container {
+        flex-direction: column;
+        height: 100%;
+      }
+      }
+    </style>
+  </head>
+
+  <body>
+      <!--Navbar-->
+  <section>
+    <div class="cover-container d-flex w-100 h-75 p-5 mx-auto flex-column gradient-background">
+      <header class="mb-20 pb-3">
+          <div>
+            <a href="../index.html">
+              <h3 class="float-md-start mb-3 text-white">My Portfolio</h3>
+            </a>
+              <nav class="navbar bg-transparent float-md-end">
+                <form class="container-fluid justify-content-center">
+                  <a class="nav-link active fw-bold p-auto px-5 inactive" href="../index.html">Home</a>
+                  <a class="nav-link fw-bold p-auto px-5 inactive" href="../Resume/resume.html">Resume</a>
+                  <a class="nav-link fw-bold p-auto px-5 inactive" href="https://www.linkedin.com/in/patryk-hanczko-98a985303/">Contact</a>              
+              </nav>
+          </div>
+      </header>
+    </div>
+  </section>
+  <section class="project">
+    <div class="pricing-container">
+      <div class="pricing-plan">
+        <div class="plan-title1">Basic</div>
+        <div class="plan-price">$9.99/month</div>
+        <ul class="plan-features">
+          <li>✅ 10GB Storage</li>
+          <li>✅ 1 User</li>
+          <li>🚫 Support</li>
+        </ul>
+        <button class="plan-button1">Sign Up</button>
+      </div>
+      <div class="pricing-plan">
+        <div class="plan-title2">Standard</div>
+        <div class="plan-price">$19.99/month</div>
+        <ul class="plan-features">
+          <li>✅ 50GB Storage</li>
+          <li>✅ 5 Users</li>
+          <li>✅ Phone &amp; Email Support</li>
+        </ul>
+        <button class="plan-button2">Sign Up</button>
+      </div>
+      <div class="pricing-plan">
+        <div class="plan-title3">Premium</div>
+        <div class="plan-price">$49.99/month</div>
+        <ul class="plan-features">
+          <li>✅ 100GB Storage</li>
+          <li>✅ 10 Users</li>
+          <li>✅ 24/7 Support</li>
+        </ul>
+        <button class="plan-button3">Sign Up</button>
+      </div>
+    </div>
+  </section>
+    <!--Footer-->
+<section class="gradient-background mt-auto">
+  <div class="container">
+    <footer class="py-1 mt-1">
+      <ul class="nav justify-content-center border-bottom pb-3 mb-3">
+        <li class="nav-item"><a href="../index.html" class="nav-link px-2 text-white">Home</a></li>
+        <li class="nav-item"><a href="../Resume/resume.html" class="nav-link px-2 text-white">Resume</a></li>
+        <li class="nav-item"><a href="https://www.linkedin.com/in/patryk-hanczko-98a985303/" class="nav-link px-2 text-white">Contact</a></li>
+        <li class="nav-item"><a href="../index.html#about" class="nav-link px-2 text-white">About</a></li>
+      </ul>
+      <p class="text-center text-white footer-text">© Patryk Hanczko</p>
+    </footer>
+  </div>
+</section>
+  </body>
+</html>

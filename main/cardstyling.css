@@ -1,0 +1,43 @@
+body, html {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+/* nav link color override */
+.nav-link {
+    color: grey !important;
+    border-bottom: 2px solid transparent !important;
+}
+/* nav link color hover override */
+.nav-link.inactive:hover {
+    color: white !important; /* Changes hover color to orange */
+    border-bottom: 2px solid white !important;
+}
+/* footer background */
+.gradient-background {
+    background: linear-gradient(300deg, grey, black, grey);
+    background-size: 180% 180%;
+    animation: gradient-animation 18s ease infinite;
+}
+@keyframes gradient-animation {
+    0% {
+      background-position: 0% 50%;
+    }
+    50% {
+      background-position: 100% 50%;
+    }
+    100% {
+      background-position: 0% 50%;
+    }
+}
+.cover-container a {
+    text-decoration: none;
+}
+footer .nav-link {
+    color: white !important; /* Ensure footer links are white */
+}
+
+footer p {
+    color: white; /* Ensure footer paragraph text is white */
+}
