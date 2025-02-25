@@ -1,0 +1,441 @@
+/* body properties */
+html, body {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+    padding: 0;
+}
+:root {
+    --navbar-height: 80px; /* Default height of the navbar */
+}
+* {
+    box-sizing: border-box;
+}
+/* navbar */
+/* navbar properties and layout */
+.navbar {
+    height: var(--navbar-height); /* Use the variable to set navbar height */
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    display: inline-flex;
+    flex-direction: row;
+    justify-content: center;
+    background-color: #000957;
+    font-family: sans-serif;
+    text-transform: uppercase;
+    transition: 0.3s ease;
+    letter-spacing: 3px;
+    position: fixed; /* fixed position on the top of webiste*/
+}
+/* links properties */
+nav a {
+    font-weight: 700;
+    text-decoration: none;
+    color: #344CB7;
+    padding: 1em;
+    font-family: sans-serif;
+    border-bottom: 2px solid transparent;
+}
+nav {
+    padding: 2em;
+}
+/* hover effect under links */
+nav a:hover {
+    color: #577BC1;
+    border-bottom: 2px solid #577BC1;
+}
+/* website title "Personal Website" link properties */
+.home {
+    text-decoration: none;
+}
+/* hero properties */
+/* position of image */
+.intro img {
+    display: block;
+    position: relative;
+    width: 100%;
+    height: auto;
+    z-index: -1;
+}
+/* position and properties of overlay */
+.hero-overlay {
+    display: flex;
+    flex-direction: column;
+    background-color: rgba(0, 0, 0, 0.6);
+    width: 100%;
+    height: auto;
+    z-index: 0;
+}
+/* layout of the headers over the image */
+.intro {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+/* position and properties of headers */
+.hero-text {
+    position: absolute;
+    z-index: 1;
+    color: white;
+    text-align: center;
+    letter-spacing: 0.5rem;
+}
+/* header 1 properties */
+h1 {
+    font-size: 5rem;
+    font-weight: 800;
+    font-family: serif;
+}
+/* header 2 properties */
+h2 {
+    font-size: 3.5rem;
+    font-family: serif;
+}
+/* header 3 properties */
+h3 {
+    font-size: 2.5rem;
+    color: #577BC1;
+    font-family: serif;
+}
+/* headder 4 properties*/
+h4 {
+    color: #344CB7;
+    font-size: 2rem;
+    font-family: serif;
+}
+h5 {
+    font-size: 1.5rem;
+    font-family: serif;
+}
+/* titles under hero */
+/* image */
+.title img {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    object-fit: cover;
+    background-color: grey;
+}
+/* title text */
+.title-text {
+    width: 30%;
+    text-align: center;
+    font-family: sans-serif;
+    font-size: 1.5rem;
+    color: grey;
+}
+/* title layout and properties */
+.title {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 5rem;
+}
+/* Resume */
+/* layout */
+.resume {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+/* resume title */
+.resume-title {
+    width: 50%;
+    text-align: center;
+    margin-top: 5rem;
+    border-top: 1px solid #344CB7;
+}
+/* resume text properties */
+.resume-text {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    color: grey;
+    width: 50%;
+    font-family: sans-serif;
+    font-size: 1.5rem;
+}
+/* skills section */
+/* videos properties */
+video {
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
+}
+/* skills layout*/
+.skills {
+    width: 50%;
+    display: grid;
+    grid-template-columns: 0.5fr 1.5fr;
+    grid-row: 1fr 1fr 1fr;
+    justify-content: center;
+    align-items: center;
+    gap: 1em;
+    color: grey;
+}
+/* skills paragraph properties */
+.skills p {
+    font-size: 1.5rem;
+    font-family: sans-serif;
+}
+/* Projects */
+.projects-container {
+    width: 100%;
+    margin-top: 5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+/* projects header properties */
+.projects-header {
+    width: 50%;
+    border-top: 1px solid #344CB7;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+/* Projects layout */
+/* projects text properties */
+.projects-text {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: grey;
+    width: 50%;
+    font-size: 1.5rem;
+    font-family: sans-serif;
+}
+/* projects hyperlink properties */
+.projects-text a {
+    font-size: 1.5rem;
+    color: #344CB7;
+}
+/* layout inside tiles */
+.tiles {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    border: 1px solid grey;
+    border-radius: 20px;
+    height: 100%;
+    width: 100%;
+    text-align: center;
+    transform: scale3d(0);
+    box-shadow: 1px 3px 3px black;
+}
+/* hover effect for the tiles */
+.tiles:hover {
+    transform: translate3d(0, -1em, 0);
+    box-shadow: 5px 10px 10px black;
+}
+/* tiles image properties */
+.tiles img {
+    width: 90%;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+}
+/* tiles layout */
+.tiles-row {
+    width: 75%;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    margin: auto;
+    gap: 1em;
+}
+/* tiles title properties */
+.tiles h4 {
+    margin: 1rem;
+}
+.tiles-row a {
+    text-decoration: none;
+}
+/* about me */
+/* about me properties */
+.about {
+    width: 50%;
+    border-top: 1px solid #344CB7;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+/* about placement on the website */
+.about-container {
+    margin-top: 5rem;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+/* about text properties */
+.about p {
+    color: grey;
+    font-size: 1.5rem;
+    font-family: sans-serif;
+}
+/* contact */
+/* contact container properties */
+.contact-container {
+    margin-top: 5rem;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+/* contact properties */
+.contact {
+    width: 50%;
+    border-top: 1px solid #344CB7;
+}
+/* contact text properties */
+.contact p {
+    color: grey;
+    font-size: 1.5rem;
+    font-family: sans-serif;
+}
+/* contact hyperlink properties */
+.contact a {
+    font-size: 1.5rem;
+    color: #344CB7;
+    font-family: sans-serif;
+}
+/* footer properties */
+.footer {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    color: #577BC1;
+    font-size: 1.5rem;
+    padding: 2rem 0 2rem 0;
+    font-family: sans-serif;
+}
+/* footer container properties */
+.footer-container {
+    display: block;
+    margin-top: 5rem;
+    width: 100%;
+    background-color: #000957;
+    position: relative;
+}
+/* responsivness */
+/* layout for screen smaller than */
+@media (max-width: 1201px) {
+    /* header 1 properties */
+h1 {
+    font-size: 2.5rem;
+    font-weight: 600;
+}
+/* header 2 properties */
+h2 {
+    font-size: 2rem;
+}
+/* header 3 properties */
+h3 {
+    font-size: 1.5rem;
+}
+/* headder 4 properties*/
+h4 {
+    font-size: 1.2rem;
+}
+/* header 5 */
+h5 {
+    font-size: 1rem;
+}
+/* navbar layout */
+.navbar nav {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+}
+/* navbar */
+:root {
+    --navbar-height: 100px; /* height for medium screens */
+}
+/* overlay with image stays always under navbar */
+.hero-overlay {
+    padding-top: calc(var(--navbar-height)); /* Automatically adjusts padding */
+}
+/* title text */
+.title-text {
+    text-align: left;
+    font-size: 1rem;
+    margin-left: 1rem;
+}
+/* titles layout */
+.title {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+/* image */
+.title img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    margin-right: 1rem;
+}
+/* resume text properties */
+.resume-text {
+    font-size: 1rem;
+}
+/* skills description */
+.skills p {
+    font-size: 1rem;
+}
+/* videos properties */
+video {
+    width: 100px;
+    height: 150px;
+    object-fit: cover;
+}
+/* projects text properties */
+.projects-text {
+    font-size: 1rem;
+}
+.projects-text a {
+    font-size: 1rem;
+}
+/* tiles layout */
+.tiles-row {
+    width: 75%;
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+    gap: 2em;
+}
+/* about text */
+.about p {
+    font-size: 1rem;
+}
+/* contact text properties */
+.contact p {
+    font-size: 1rem;
+}
+/* contact hyperlink properties */
+.contact a {
+    font-size: 1rem;
+}
+}
+@media (max-width: 650px) {
+    :root {
+        --navbar-height: 200px; /* height for smaller screens */
+    }
+    .navbar {
+        position: absolute;
+    }
+}
